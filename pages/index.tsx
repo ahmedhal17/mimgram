@@ -25,7 +25,7 @@ export default function Home({exploreData, cardsData}) {
           {/* Pull data from server -API endpoints */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-          {exploreData?.map(({ img, location, distance}) => (
+          {exploreData?.map(({ img, location, distance}: any) => (
             <SmallCard 
             key={img}
             img={img} 
@@ -38,7 +38,7 @@ export default function Home({exploreData, cardsData}) {
         <section>
           <h2 className='text-3xl font-bold pb-5 py-8'>Live Anywhere</h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -m-3">
-          {cardsData.map(({img, title}) => (
+          {cardsData.map(({img, title}: any) => (
             <MediumCard key={img} img={img} title={title} />
           ))}
 
